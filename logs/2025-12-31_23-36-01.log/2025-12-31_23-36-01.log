@@ -1,0 +1,10 @@
+[2025-12-31 23:36:01,736] WARNING -  * Debugger is active!
+[2025-12-31 23:36:01,736] INFO -  * Debugger PIN: 134-357-345
+[2025-12-31 23:36:06,865] INFO - 127.0.0.1 - - [31/Dec/2025 23:36:06] "GET / HTTP/1.1" 200 -
+[2025-12-31 23:36:09,438] INFO - 127.0.0.1 - - [31/Dec/2025 23:36:09] "GET / HTTP/1.1" 200 -
+[2025-12-31 23:36:22,460] INFO - 127.0.0.1 - - [31/Dec/2025 23:36:22] "GET /predict HTTP/1.1" 200 -
+[2025-12-31 23:37:06,778] INFO - Input data converted to DataFrame
+[2025-12-31 23:37:11,394] INFO - Prediction completed successfully
+[2025-12-31 23:37:11,396] INFO - 127.0.0.1 - - [31/Dec/2025 23:37:11] "POST /predict HTTP/1.1" 200 -
+[2025-12-31 23:37:22,723] INFO -  * Detected change in 'C:\\Users\\SRIHARSHITH\\OneDrive\\Desktop\\LOAN_PROJECT\\app.py', reloading
+[2025-12-31 23:37:22,723] INFO -  * Detected change in 'C:\\Users\\SRIHARSHITH\\OneDrive\\Desktop\\LOAN_PROJECT\\app.py', reloading

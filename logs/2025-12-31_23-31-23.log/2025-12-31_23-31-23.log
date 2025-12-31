@@ -1,0 +1,11 @@
+[2025-12-31 23:31:23,161] WARNING -  * Debugger is active!
+[2025-12-31 23:31:23,165] INFO -  * Debugger PIN: 134-357-345
+[2025-12-31 23:31:27,592] INFO - 127.0.0.1 - - [31/Dec/2025 23:31:27] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+[2025-12-31 23:31:29,974] INFO - 127.0.0.1 - - [31/Dec/2025 23:31:29] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+[2025-12-31 23:31:53,015] INFO - 127.0.0.1 - - [31/Dec/2025 23:31:53] "GET / HTTP/1.1" 200 -
+[2025-12-31 23:33:25,852] INFO - 127.0.0.1 - - [31/Dec/2025 23:33:25] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+[2025-12-31 23:33:36,733] INFO - 127.0.0.1 - - [31/Dec/2025 23:33:36] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+[2025-12-31 23:33:43,381] INFO - 127.0.0.1 - - [31/Dec/2025 23:33:43] "GET / HTTP/1.1" 200 -
+[2025-12-31 23:35:00,757] INFO -  * Detected change in 'C:\\Users\\SRIHARSHITH\\OneDrive\\Desktop\\LOAN_PROJECT\\app.py', reloading
+[2025-12-31 23:35:00,757] INFO -  * Detected change in 'C:\\Users\\SRIHARSHITH\\OneDrive\\Desktop\\LOAN_PROJECT\\app.py', reloading
+[2025-12-31 23:35:00,757] INFO -  * Detected change in 'C:\\Users\\SRIHARSHITH\\OneDrive\\Desktop\\LOAN_PROJECT\\app.py', reloading

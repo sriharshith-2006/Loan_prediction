@@ -1,0 +1,27 @@
+[2025-12-31 23:08:15,892] INFO - Starting data ingestion process
+[2025-12-31 23:08:16,384] INFO - Raw data saved at artifacts\raw_data.csv
+[2025-12-31 23:08:16,434] INFO - Data split into training and testing sets
+[2025-12-31 23:08:16,861] INFO - Training data saved at artifacts\train_data.csv
+[2025-12-31 23:08:16,861] INFO - Testing data saved at artifacts\test_data.csv
+[2025-12-31 23:08:16,866] INFO - Starting data transformation process
+[2025-12-31 23:08:16,976] INFO - Training and testing data read successfully
+[2025-12-31 23:08:16,992] INFO - Creating data transformer object
+[2025-12-31 23:08:16,992] INFO - Numerical and categorical pipelines created
+[2025-12-31 23:08:17,162] INFO - Data transformation completed successfully
+[2025-12-31 23:08:17,177] INFO - Object saved successfully at artifacts\preprocessor.pkl
+[2025-12-31 23:08:17,179] INFO - Splitting training and testing arrays
+[2025-12-31 23:08:17,183] INFO - Training model: Logistic Regression
+[2025-12-31 23:08:17,312] INFO - Logistic Regression Accuracy: 0.8997777777777778
+[2025-12-31 23:08:17,312] INFO - Training model: Decision Tree
+[2025-12-31 23:08:23,569] INFO - Decision Tree Accuracy: 0.9215555555555556
+[2025-12-31 23:08:23,569] INFO - Training model: Random Forest
+[2025-12-31 23:08:41,125] INFO - Random Forest Accuracy: 0.9295555555555556
+[2025-12-31 23:08:41,125] INFO - Training model: KNeighbors
+[2025-12-31 23:08:46,943] INFO - KNeighbors Accuracy: 0.8977777777777778
+[2025-12-31 23:08:46,943] INFO - Training model: XGBoost
+[2025-12-31 23:08:51,274] INFO - XGBoost Accuracy: 0.9368888888888889
+[2025-12-31 23:08:51,285] INFO - Training model: CatBoost
+[2025-12-31 23:09:04,480] INFO - CatBoost Accuracy: 0.9323333333333333
+[2025-12-31 23:09:04,480] INFO - Best Model: XGBoost with Accuracy: 0.9368888888888889
+[2025-12-31 23:09:04,500] INFO - Object saved successfully at artifacts\model.pkl
+[2025-12-31 23:09:04,500] INFO - Best classification model saved successfully

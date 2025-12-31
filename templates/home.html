@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction App</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 700px;
+            width: 100%;
+        }
+        h1 { text-align: center; margin-bottom: 30px; color: #333; }
+        form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        label { font-weight: bold; color: #555; }
+        input, select { width: 100%; padding: 10px; margin-top: 5px; border-radius: 10px; border: 1px solid #ccc; outline: none; transition: all 0.3s ease; }
+        input:focus, select:focus { border-color: #74ebd5; box-shadow: 0 0 5px rgba(116,235,213,0.5); }
+        .submit-btn { grid-column: 1 / -1; padding: 15px; background: #74ebd5; border: none; border-radius: 15px; color: #fff; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; }
+        .submit-btn:hover { background: #67d5c7; }
+        .prediction {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 15px;
+        }
+        .approved { background-color: #4CAF50; color: white; }
+        .rejected { background-color: #f44336; color: white; }
+        @media (max-width: 600px) { form { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Prediction App</h1>
+        <form method="POST" action="/predict">
+            <!-- Form fields -->
+            <label>Age</label>
+            <input type="number" name="person_age" required>
+            <label>Gender</label>
+            <select name="person_gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <label>Education</label>
+            <select name="person_education" required>
+                <option value="High School">High School</option>
+                <option value="Bachelor">Bachelor</option>
+                <option value="Master">Master</option>
+            </select>
+            <label>Income</label>
+            <input type="number" name="person_income" required>
+            <label>Employment Experience (years)</label>
+            <input type="number" name="person_emp_exp" required>
+            <label>Home Ownership</label>
+            <select name="person_home_ownership" required>
+                <option value="RENT">RENT</option>
+                <option value="OWN">OWN</option>
+                <option value="MORTGAGE">MORTGAGE</option>
+            </select>
+            <label>Loan Amount</label>
+            <input type="number" name="loan_amnt" required>
+            <label>Loan Intent</label>
+            <select name="loan_intent" required>
+                <option value="PERSONAL">PERSONAL</option>
+                <option value="EDUCATION">EDUCATION</option>
+                <option value="MEDICAL">MEDICAL</option>
+            </select>
+            <label>Loan Interest Rate</label>
+            <input type="number" step="0.01" name="loan_int_rate" required>
+            <label>Loan Percent Income</label>
+            <input type="number" step="0.01" name="loan_percent_income" required>
+            <label>Credit History Length (years)</label>
+            <input type="number" name="cb_person_cred_hist_length" required>
+            <label>Credit Score</label>
+            <input type="number" name="credit_score" required>
+            <label>Previous Loan Defaults</label>
+            <select name="previous_loan_defaults_on_file" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <button type="submit" class="submit-btn">Predict Loan Status</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="prediction {% if prediction_text == 'Approved' %}approved{% else %}rejected{% endif %}">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
